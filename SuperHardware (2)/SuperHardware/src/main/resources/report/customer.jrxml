@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="customer" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1b8deb1-477f-4022-971e-df6487dc812b">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<queryString language="SQL">
+		<![CDATA[select * from customer;]]>
+	</queryString>
+	<field name="cust_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cust_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="cust_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="cust_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cust_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="cust_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="address"/>
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="contact" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="contact"/>
+		<property name="com.jaspersoft.studio.field.label" value="contact"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="550" height="40" forecolor="#07051F" backcolor="#601573" uuid="59c5885d-e617-42f4-bef4-59412f3f0efd"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="210" y="6" width="150" height="30" forecolor="#FFFFFF" uuid="5229a129-f011-418d-a3c3-9045ece61e01"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUSTOMERS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="100" height="20" uuid="2e10baae-08d7-4c27-a14c-8b5abd29d9d7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f32981bb-ae1b-4ca5-8cca-7e0e00e918fd"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="100" height="20" uuid="541f4169-114d-4afc-97b5-cbdaa74f074b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7462afae-b453-4770-a5ba-541c9e04b940"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="100" height="20" uuid="e4f5018c-19b6-440a-bda1-004428075bfc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9371378e-ae8b-449c-ba40-264581d0be75"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="0" width="100" height="20" uuid="9d4627a2-e66c-43a4-bdc0-7fabce6cb957">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ba4eb65-86a2-4568-bb40-a3c9ea131593"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="4" width="100" height="30" uuid="f9a20b5d-83d4-40eb-b7ed-b8ec0b99c4de">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f32981bb-ae1b-4ca5-8cca-7e0e00e918fd"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cust_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="2" width="100" height="30" uuid="7f67c3a5-b290-4d2e-968b-6bfb114392d8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7462afae-b453-4770-a5ba-541c9e04b940"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cust_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="2" width="100" height="30" uuid="92892f24-9638-4937-9361-20efe0dc3e46">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9371378e-ae8b-449c-ba40-264581d0be75"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="2" width="100" height="30" uuid="52dd9abe-6cd0-4a50-bc5a-fab48f9c8fd7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3ba4eb65-86a2-4568-bb40-a3c9ea131593"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{contact}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

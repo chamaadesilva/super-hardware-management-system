@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.superHardware.controller.EmployeeFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="800.0" layoutX="-1.0" layoutY="-1.0" opacity="0.65" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/black-background-with-gears_23-2149872527.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="296.0" layoutY="45.0" text="Employee  Manage" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="130.0" prefHeight="27.0" prefWidth="128.0" text="Employee Id" textFill="#2b2a2a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="307.0" layoutY="130.0" prefHeight="27.0" prefWidth="157.0" text="Employee Name" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="521.0" layoutY="130.0" prefHeight="18.0" prefWidth="104.0" text="Address" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmployeeId" layoutX="118.0" layoutY="171.0" prefHeight="34.0" prefWidth="150.0" />
+      <TextField fx:id="txtEmployeeName" layoutX="311.0" layoutY="171.0" prefHeight="34.0" prefWidth="150.0" />
+      <TextField fx:id="txtAddress" layoutX="511.0" layoutY="171.0" prefHeight="34.0" prefWidth="150.0" />
+      <JFXButton layoutX="594.0" layoutY="273.0" onAction="#btnOnActionDelete" prefHeight="43.0" prefWidth="106.0" ripplerFill="#f05941" style="-fx-background-color: #C70039;" text="          Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="279.0" layoutY="273.0" onAction="#btnOnActionSave" prefHeight="43.0" prefWidth="106.0" ripplerFill="BLACK" style="-fx-background-color: #1B9C85;" text="        Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="439.0" layoutY="276.0" onAction="#btnOnActionUpdate" prefHeight="43.0" prefWidth="104.0" ripplerFill="BLACK" style="-fx-background-color: Yellow;" text="      Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="126.0" layoutY="276.0" onAction="#btnOnActionClear" prefHeight="43.0" prefWidth="94.0" ripplerFill="BLACK" style="-fx-background-color: #2F58CD;" text="      Clear">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="132.0" layoutY="284.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/clear-option.209x256.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="26.0" layoutX="296.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/save.256x256.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="450.0" layoutY="287.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/update.256x188.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="603.0" layoutY="284.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/alternate-trash.224x256.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblEmployee" layoutX="73.0" layoutY="350.0" onMouseClicked="#tblOnMouseClickedAction" prefHeight="327.0" prefWidth="654.0">
+        <columns>
+          <TableColumn fx:id="colEmployeeId" prefWidth="160.8000030517578" text="emp_id" />
+          <TableColumn fx:id="colEmployeeName" prefWidth="256.0" text="emp_name" />
+            <TableColumn fx:id="colAddress" prefWidth="239.99993896484375" text="address" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

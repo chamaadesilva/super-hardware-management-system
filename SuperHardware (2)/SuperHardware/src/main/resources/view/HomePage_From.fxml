@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.superHardware.controller.HomePageFromController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#93948f" height="800.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#81817d" height="100.0" layoutX="200.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <Button layoutX="21.0" layoutY="176.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="36.0" prefWidth="158.0" text="Dashboard">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="21.0" layoutY="261.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="36.0" prefWidth="158.0" text="Customer">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="21.0" layoutY="348.0" mnemonicParsing="false" onAction="#btnOrderOnAction" prefHeight="36.0" prefWidth="158.0" text="Order">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="21.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnItemStockOnAction" prefHeight="36.0" prefWidth="158.0" text="Item Stock">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="21.0" layoutY="524.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" prefHeight="36.0" prefWidth="158.0" text="Supplier">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="21.0" layoutY="615.0" mnemonicParsing="false" onAction="#btnEmployeeOnAction" prefHeight="36.0" prefWidth="158.0" text="Employee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="21.0" layoutY="707.0" mnemonicParsing="false" onAction="#btnOrderItemDetailsOnAction" prefHeight="36.0" prefWidth="158.0" text="Order Item Details">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="115.0" fitWidth="89.0" layoutX="48.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/Mechanic.jpg" />
+         </image>
+      </ImageView>
+      <TextField layoutX="404.0" layoutY="28.0" prefHeight="36.0" prefWidth="391.0" />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="757.0" layoutY="37.0">
+         <image>
+            <Image url="@../../../../../../../IdeaProjects/SuperHardware1/src/main/resources/assests/search.256x255.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="207.0" layoutY="38.0" text="Date :">
+         <font>
+            <Font name="Arial Narrow Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="250.0" layoutY="38.0" text="2023-11-27">
+         <font>
+            <Font name="Arial Narrow Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="810.0" layoutY="37.0" text="Time :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="858.0" layoutY="37.0" text="12.30 P.M">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="txtAnchor" layoutX="200.0" layoutY="100.0" prefHeight="700.0" prefWidth="800.0" />
+   </children>
+</AnchorPane>

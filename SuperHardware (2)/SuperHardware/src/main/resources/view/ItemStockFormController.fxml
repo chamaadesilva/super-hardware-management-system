@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.superHardware.controller.ItemStockFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="800.0" layoutX="-1.0" layoutY="-4.0" opacity="0.62" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/black-background-with-gears_23-2149872527.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="287.0" layoutY="32.0" prefHeight="22.0" prefWidth="171.0" text="Item Stock Manage" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="93.0" prefHeight="27.0" prefWidth="142.0" text="Item Stock Code" textFill="#201f1f">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="361.0" layoutY="93.0" prefHeight="27.0" prefWidth="157.0" text="Item Name" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="198.0" prefHeight="18.0" prefWidth="104.0" text="Quantity" textFill="#1e1d1d">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="577.0" layoutY="93.0" prefHeight="27.0" prefWidth="142.0" text="Item Unit Price" textFill="#101010">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtItemStockCode" layoutX="95.0" layoutY="140.0" prefHeight="34.0" prefWidth="150.0" />
+      <TextField fx:id="txtItemName" layoutX="358.0" layoutY="139.0" prefHeight="34.0" prefWidth="150.0" />
+      <TextField fx:id="txtQuantity" layoutX="92.0" layoutY="236.0" prefHeight="34.0" prefWidth="150.0" />
+      <TextField fx:id="txtItemUnitPrice" layoutX="573.0" layoutY="139.0" prefHeight="34.0" prefWidth="150.0" />
+      <JFXButton layoutX="553.0" layoutY="314.0" onAction="#btnOnActionDelete" prefHeight="43.0" prefWidth="106.0" ripplerFill="#f05941" style="-fx-background-color: #C70039;" text="          Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="234.0" layoutY="314.0" onAction="#btnOnActionSave" prefHeight="43.0" prefWidth="106.0" ripplerFill="BLACK" style="-fx-background-color: #1B9C85;" text="        Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="402.0" layoutY="314.0" onAction="#btnOnActionUpdate" prefHeight="43.0" prefWidth="94.0" ripplerFill="BLACK" style="-fx-background-color: Yellow;" text="      Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="92.0" layoutY="314.0" onAction="#btnOnActionClear" prefHeight="43.0" prefWidth="94.0" ripplerFill="BLACK" style="-fx-background-color: #2F58CD;" text="      Clear">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="109.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/clear-option.209x256.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="26.0" layoutX="246.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/save.256x256.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="407.0" layoutY="325.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/update.256x188.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="566.0" layoutY="325.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/alternate-trash.224x256.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="350.0" layoutY="198.0" prefHeight="27.0" prefWidth="157.0" text="Item Cateogry" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtItemCateogry" layoutX="358.0" layoutY="236.0" prefHeight="34.0" prefWidth="150.0" />
+      <TableView fx:id="tblItemStock" layoutX="83.0" layoutY="380.0" onMouseClicked="#tblOnMouseClickedAction" prefHeight="310.0" prefWidth="648.0">
+        <columns>
+          <TableColumn fx:id="colItemStockCode" prefWidth="136.80006408691406" text="item_stock_code" />
+          <TableColumn fx:id="colItemName" prefWidth="136.0" text="item_name" />
+            <TableColumn fx:id="colItemUnitPrice" prefWidth="119.20001220703125" text="item_unit_price" />
+            <TableColumn fx:id="colQuantity" prefWidth="116.7999267578125" text="quantity" />
+            <TableColumn fx:id="colItemCateogry" prefWidth="139.2000732421875" text="item_cateogry" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="537.0" layoutY="240.0" onAction="#btnItemStockOnAction" prefHeight="26.0" prefWidth="133.0" style="-fx-background-color: black;" text="Item Stock Report" textFill="#eaeaea" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.validation.ValidationFacade?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="699.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.superHardware.controller.DeliveryFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1000.0" opacity="0.68" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/black-background-with-gears_23-2149872527.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="254.0" layoutY="323.0" onAction="#btnOnActionClear" prefHeight="43.0" prefWidth="106.0" ripplerFill="BLACK" style="-fx-background-color: #2F58CD;" text="      Clear">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5f6f7" height="700.0" opacity="0.7" stroke="#202020" strokeType="INSIDE" width="200.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Rectangle>
+      <ImageView fitHeight="150.0" fitWidth="144.0" layoutX="557.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/Mechanic.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="60.0" layoutY="259.0" onAction="#btnOnActionCustomer" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: gray;" text="Customer">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="59.0" layoutY="451.0" onAction="#btnOnActionSupplier" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: gray;" text="Supplier">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="59.0" layoutY="506.0" onAction="#btnOnActionEmployee" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: gray;" text="Employee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="60.0" layoutY="565.0" onAction="#btnOnActionOrderItemDetails" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: gray;" text="Order Item Details">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="60.0" layoutY="392.0" onAction="#btnOnActionItemStock" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: gray;" text="Item Stock">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="60.0" layoutY="330.0" onAction="#btnOnActionOrder" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: gray;" text="Order">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="60.0" layoutY="200.0" onAction="#btnOnActionDashboard" prefHeight="26.0" prefWidth="113.0" style="-fx-background-color: gray;" text="Dashboard">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="458.0" layoutY="51.0" text="Delivery Manage" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="255.0" layoutY="125.0" prefHeight="18.0" prefWidth="104.0" text="Delivery Id" textFill="#101010">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="451.0" layoutY="125.0" prefHeight="27.0" prefWidth="157.0" text="Order Id" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="225.0" prefHeight="18.0" prefWidth="104.0" text="Location" textFill="#080808">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="451.0" layoutY="225.0" prefHeight="27.0" prefWidth="142.0" text="Delivered Date" textFill="#101010">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDeliveryId" layoutX="267.0" layoutY="156.0" prefHeight="34.0" prefWidth="150.0" />
+      <TextField fx:id="txtOrderId" layoutX="475.0" layoutY="152.0" prefHeight="34.0" prefWidth="150.0" />
+      <TextField fx:id="txtLocation" layoutX="267.0" layoutY="252.0" prefHeight="34.0" prefWidth="150.0" />
+      <JFXButton layoutX="750.0" layoutY="322.0" onAction="#btnOnActionDelete" prefHeight="43.0" prefWidth="106.0" ripplerFill="#f05941" style="-fx-background-color: #C70039;" text="          Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="419.0" layoutY="322.0" onAction="#btnOnActionSave" prefHeight="43.0" prefWidth="106.0" ripplerFill="BLACK" style="-fx-background-color: #1B9C85;" text="        Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="579.0" layoutY="323.0" onAction="#btnOnActionUpdate" prefHeight="43.0" prefWidth="114.0" ripplerFill="BLACK" style="-fx-background-color: Yellow;" text="         Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="272.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/clear-option.209x256.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="26.0" layoutX="429.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/save.256x256.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="593.0" layoutY="334.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/update.256x188.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="758.0" layoutY="334.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/alternate-trash.224x256.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="671.0" layoutY="125.0" prefHeight="27.0" prefWidth="157.0" text="Employee Id" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmployeeId" layoutX="694.0" layoutY="152.0" prefHeight="34.0" prefWidth="150.0" />
+      <ValidationFacade />
+      <DatePicker fx:id="txtDeliveredDate" layoutX="472.0" layoutY="252.0" prefHeight="34.0" prefWidth="158.0" />
+      <TableView fx:id="tblDelivery" layoutX="236.0" layoutY="405.0" prefHeight="278.0" prefWidth="644.0">
+        <columns>
+          <TableColumn fx:id="colDeliveryId" prefWidth="87.99993896484375" text="delivery_id" />
+          <TableColumn fx:id="colEmployeeId" prefWidth="152.00006103515625" text="emp_id" />
+            <TableColumn fx:id="colOrderId" prefWidth="131.20004272460938" text="ord_id" />
+            <TableColumn fx:id="colLocation" prefWidth="121.5999755859375" text="location" />
+            <TableColumn fx:id="colDeliveredDate" prefWidth="144.800048828125" text="delivered_date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

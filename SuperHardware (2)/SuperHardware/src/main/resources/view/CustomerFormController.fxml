@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.superHardware.controller.CustomerFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="800.0" layoutY="-1.0" opacity="0.67" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/black-background-with-gears_23-2149872527.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="286.0" layoutY="37.0" text="Customer Manage" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="85.0" prefHeight="18.0" prefWidth="104.0" text="Customer Id">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="398.0" layoutY="85.0" prefHeight="27.0" prefWidth="157.0" text="Customer Name" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="180.0" prefHeight="18.0" prefWidth="104.0" text="Address">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="397.0" layoutY="180.0" prefHeight="18.0" prefWidth="104.0" text="Contact" textFill="#101010">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCustomerId" layoutX="92.0" layoutY="129.0" prefHeight="34.0" prefWidth="150.0" />
+      <TextField fx:id="txtCustomerName" layoutX="389.0" layoutY="121.0" prefHeight="34.0" prefWidth="150.0" />
+      <TextField fx:id="txtAddress" layoutX="92.0" layoutY="221.0" prefHeight="34.0" prefWidth="150.0" />
+      <TextField fx:id="txtContact" layoutX="389.0" layoutY="221.0" prefHeight="34.0" prefWidth="150.0" />
+      <JFXButton layoutX="592.0" layoutY="305.0" onAction="#btnOnActionDelete" prefHeight="43.0" prefWidth="106.0" ripplerFill="#f05941" style="-fx-background-color: #C70039;" text="          Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="257.0" layoutY="305.0" onAction="#btnOnActionSave" prefHeight="43.0" prefWidth="106.0" ripplerFill="BLACK" style="-fx-background-color: #1B9C85;" text="        Save">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="443.0" layoutY="305.0" onAction="#btnOnActionUpdate" prefHeight="43.0" prefWidth="94.0" ripplerFill="BLACK" style="-fx-background-color: Yellow;" text="      Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="97.0" layoutY="305.0" onAction="#btnOnActionClear" prefHeight="43.0" prefWidth="94.0" ripplerFill="BLACK" style="-fx-background-color: #2F58CD;" text="      Clear">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="111.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/clear-option.209x256.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="26.0" layoutX="275.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/save.256x256.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="298.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="453.0" layoutY="315.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/update.256x188.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="610.0" layoutY="315.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/alternate-trash.224x256.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblCustomer" layoutX="66.0" layoutY="376.0" onMouseClicked="#tblOnMouseClickedAction" prefHeight="295.0" prefWidth="646.0">
+        <columns>
+          <TableColumn fx:id="colCustomerId" prefWidth="127.99993896484375" text="cust_id" />
+          <TableColumn fx:id="colCustomerName" prefWidth="189.60006713867188" text="cust_name" />
+            <TableColumn fx:id="colAddress" prefWidth="152.0" text="address" />
+            <TableColumn fx:id="colContact" prefWidth="175.19992675781248" text="contact" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="610.0" layoutY="221.0" onAction="#btnCustomerOnAction" prefHeight="43.0" prefWidth="106.0" style="-fx-background-color: black;" text="Customer Report" textFill="#eadede" />
+   </children>
+</AnchorPane>

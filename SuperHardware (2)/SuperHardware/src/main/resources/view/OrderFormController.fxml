@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.superHardware.controller.OrderFormController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="800.0" layoutX="-1.0" opacity="0.5" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/black-background-with-gears_23-2149872527.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="307.0" layoutY="46.0" prefHeight="22.0" prefWidth="173.0" text="Order Manage" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="128.0" prefHeight="18.0" prefWidth="104.0" text="Order Id" textFill="#1e1d1d">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="197.0" prefHeight="18.0" prefWidth="104.0" text="Customer Id" textFill="#262525">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCustomerId" layoutX="55.0" layoutY="237.0" prefHeight="34.0" prefWidth="150.0" />
+      <TextField fx:id="txtOrderPayment" layoutX="301.0" layoutY="237.0" prefHeight="34.0" prefWidth="150.0" />
+      <JFXButton layoutX="449.0" layoutY="304.0" onAction="#btnOnActionDelete" prefHeight="43.0" prefWidth="106.0" ripplerFill="#f05941" style="-fx-background-color: #C70039;" text="          Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="281.0" layoutY="304.0" onAction="#btnOnActionUpdate" prefHeight="43.0" prefWidth="94.0" ripplerFill="BLACK" style="-fx-background-color: Yellow;" text="      Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="92.0" layoutY="303.0" onAction="#btnOnActionClear" prefHeight="43.0" prefWidth="104.0" ripplerFill="BLACK" style="-fx-background-color: #2F58CD;" text="      Clear">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="107.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/clear-option.209x256.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="290.0" layoutY="315.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/update.256x188.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="459.0" layoutY="314.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/alternate-trash.224x256.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="301.0" layoutY="197.0" prefHeight="27.0" prefWidth="132.0" text="Order Payment" textFill="#101010">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="548.0" layoutY="197.0" prefHeight="27.0" prefWidth="132.0" text="Order Date" textFill="#131212">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txtOrderdate" layoutX="548.0" layoutY="235.0" prefHeight="34.0" prefWidth="150.0" />
+      <TableView fx:id="tblOrder" layoutX="66.0" layoutY="389.0" onMouseClicked="#orderTableOnMouseClickedAction" prefHeight="296.0" prefWidth="654.0">
+        <columns>
+          <TableColumn fx:id="colOrderId" prefWidth="134.0" text="ord_id" />
+          <TableColumn fx:id="colCustomerId" prefWidth="171.0" text="cust_id" />
+            <TableColumn fx:id="colOrderPayment" minWidth="0.0" prefWidth="174.0" text="ord_payment" />
+            <TableColumn fx:id="colOrderDate" prefWidth="165.0" text="ord_date" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblOrderId" layoutX="266.0" layoutY="156.0" prefHeight="34.0" prefWidth="150.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="639.0" layoutY="302.0" onAction="#btnReportOnAction" style="-fx-background-color: black;" text="Generate Bill" textFill="#e1dada" />
+   </children>
+</AnchorPane>

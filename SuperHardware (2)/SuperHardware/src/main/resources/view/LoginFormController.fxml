@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="loginPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.superHardware.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="699.0" fitWidth="900.0" layoutY="1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/frame-different-tools-toy-car-table_23-2148096420.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a19595e3" height="654.0" layoutX="476.0" layoutY="27.0" stroke="#bfbcbc00" strokeType="INSIDE" width="410.0" />
+      <Label layoutX="375.0" layoutY="27.0" prefHeight="16.0" prefWidth="212.0" text="  " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="401.0" layoutY="46.0" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="580.0" layoutY="209.0" onAction="#txtUserNameOnAction" prefHeight="42.0" prefWidth="233.0" />
+      <Label layoutX="553.0" layoutY="175.0" text="User Name">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="549.0" layoutY="306.0" text="Password">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Text layoutX="439.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField layoutX="-29.0" layoutY="-58.0" />
+      <JFXButton layoutX="639.0" layoutY="449.0" onAction="#btnLoginOnAction" prefHeight="50.0" prefWidth="122.0" style="-fx-background-color: #484F89;" text="Log In">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></JFXButton>
+      <Label layoutX="515.0" layoutY="40.0" prefHeight="42.0" prefWidth="166.0" text=" Welcome to " textFill="#1e1c1c">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="597.0" layoutY="82.0" prefHeight="32.0" prefWidth="186.0" text="Super Hardware..." textFill="#2b2929">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="158.0" fitWidth="122.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/Mechanic.jpg" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="txtPassword" layoutX="583.0" layoutY="351.0" onAction="#txtPasswordOnAction" prefHeight="42.0" prefWidth="234.0" />
+   </children>
+</AnchorPane>
