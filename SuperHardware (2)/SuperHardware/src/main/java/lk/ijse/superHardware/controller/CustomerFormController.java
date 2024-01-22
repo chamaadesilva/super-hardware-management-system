@@ -58,7 +58,7 @@ public class CustomerFormController {
     }
 
     @FXML
-    void tblOnMouseClickedAction(MouseEvent event) {   ///////////////new///////////////////////////////////////////
+    void tblOnMouseClickedAction(MouseEvent event) { 
         TablePosition pos=tblCustomer.getSelectionModel().getSelectedCells().get(0);
         int row=pos.getRow();
 
@@ -163,8 +163,6 @@ public class CustomerFormController {
         stage.setScene(scene);
         stage.setTitle("FullReport Manage");
         stage.centerOnScreen();
-
-
     }
 
     @FXML
