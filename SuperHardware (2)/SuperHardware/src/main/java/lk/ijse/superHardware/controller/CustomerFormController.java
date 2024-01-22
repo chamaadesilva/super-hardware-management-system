@@ -53,7 +53,6 @@ public class CustomerFormController {
         colCustomerId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colContact.setCellValueFactory(new PropertyValueFactory<>("contact"));
 
-
         setTable();
     }
 
